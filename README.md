@@ -244,33 +244,13 @@ The reasoning is therefore tied to the channel's own historical performance rath
 
 ## 🧰 Tech Stack
 
-### Application
-
-- **Python**
-- **Streamlit**
-
-### Data
-
-- **YouTube Data API v3**
-- `google-api-python-client`
-
-### AI / LLM
-
-- **Google Gemini**
-- **LangChain**
-- Structured LLM output
-
-### Data Validation
-
-- **Pydantic**
-
-### Configuration
-
-- **python-dotenv**
-
-### Package Management
-
-- **uv**
+| Ranking              | What it measures                                    |
+| -------------------- | --------------------------------------------------- |
+| Application          | **Python**,**Streamlit**                            |
+| Data                 | **YT Data API V3**, `google-api-python-client`      |
+| Reasoning            | **Google Gemini**                                   |
+| Tools                | **Langchain**                                       |
+| Validation           | **Pydantic**                                        |
 
 ---
 
@@ -361,10 +341,8 @@ Create a `.env` file in the project root:
 
 ```env
 YT_DATA_API=your_youtube_data_api_key
-GOOGLE_API_KEY=your_google_gemini_api_key
+GEMINI_API_KEY=your_google_gemini_api_key
 ```
-
-Never commit your `.env` file or expose your API keys publicly.
 
 ### 4. Run the application
 
@@ -376,83 +354,6 @@ The application will open in your browser.
 
 ---
 
-## 🖥️ Usage
-
-1. Enter a YouTube channel URL.
-2. Select the desired **time range**.
-3. Choose how videos should be ranked.
-4. Select either the channel's uploads or a specific playlist.
-5. Click **Generate Ideas**.
-6. The application analyzes the selected videos.
-7. The LLM receives the channel and performance context.
-8. Review the generated video ideas and their impact levels.
-
----
-
-## 🛡️ Error Handling
-
-The application includes explicit handling for common YouTube API failures.
-
-| Error                       | Application Response                 |
-| --------------------------- | ------------------------------------ |
-| Channel not found           | Prompts the user to check the URL    |
-| Rate limit / quota exceeded | Informs the user to try again later  |
-| Forbidden request           | Indicates an API configuration issue |
-| Unknown API error           | Displays a generic failure message   |
-
-API responses are converted into a common `ChannelFetchError` enum so that the UI can handle different failure conditions consistently.
-
----
-
-## 🎯 Design Philosophy
-
-The core idea behind this project is simple:
-
-> **An LLM can generate ideas, but giving it the right context makes those ideas significantly more useful.**
-
-A generic prompt can produce an endless number of plausible YouTube ideas. The harder problem is determining **which ideas make sense for a specific creator**.
-
-This project therefore focuses on building the context first:
-
-**Channel → Content → Performance → Patterns → Ideas**
-
-The LLM is used as the reasoning layer on top of that data rather than as the source of the data itself.
-
----
-
-## 🔮 Future Improvements
-
-Some potential directions for expanding the project include:
-
-- Incorporating additional engagement metrics
-- Comparing performance across different content formats
-- Adding thumbnail/title pattern analysis
-- Tracking generated ideas against their eventual performance
-- Maintaining historical channel snapshots
-- Adding more ranking and filtering strategies
-- Supporting additional LLM providers
-- Allowing creators to compare multiple playlists or content categories
-
----
-
-## ⚠️ Limitations
-
-The generated impact level is an **AI-assisted estimate**, not a guarantee of future performance.
-
-The quality of recommendations also depends on the amount and quality of historical channel data available. A channel with very little content or highly inconsistent performance provides less evidence for reliable pattern detection.
-
-The application also depends on access to the YouTube Data API and the associated API quota.
-
----
-
-## 📜 License
-
-This project is available under the license included in this repository.
-
----
-
 ## 👨‍💻 Author
 
-**KaisoX24**
-
-Built as an experiment in combining **YouTube analytics, structured data extraction, and LLM reasoning** to make content planning more data-driven.
+**Pramit Acharjya**

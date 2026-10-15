@@ -1,4 +1,4 @@
-# 🎬 Youtube Idea Generator
+# Youtube Idea Generator
 
 > **Turn your YouTube channel's performance data into data-driven video ideas.**
 
@@ -10,14 +10,14 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔎 **YouTube channel analysis**
+- **YouTube channel analysis**
 
   - Extracts channel information from a YouTube channel URL
   - Retrieves subscriber count, channel description, and upload information
 
-- 📊 **Video performance analysis**
+- **Video performance analysis**
 
   - Retrieves video statistics including:
     - Views
@@ -28,7 +28,7 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
     - Views per day
     - Views per subscriber
 
-- 📅 **Flexible analysis periods**
+- **Flexible analysis periods**
 
   - Last 30 days
   - Last 90 days
@@ -36,24 +36,24 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
   - Last 1 year
   - All time
 
-- 📁 **Playlist-based analysis**
+- **Playlist-based analysis**
 
   - Analyze the entire channel's uploads
   - Or select a specific playlist to narrow the analysis scope
 
-- 🏆 **Multiple ranking strategies**
+- **Multiple ranking strategies**
 
   - Views per day
   - Total views
   - Views per subscriber
 
-- 🧠 **LLM-powered reasoning**
+- **LLM-powered reasoning**
 
   - Provides the LLM with actual channel and video performance data
   - Generates ideas based on patterns found in the channel's existing content
   - Avoids relying solely on generic YouTube advice
 
-- 📋 **Structured AI output**
+- **Structured AI output**
 
   - Every generated idea contains:
     - A specific video title
@@ -61,13 +61,13 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
     - Data-grounded reasoning
     - An impact rating
 
-- 🟢🟡🔴 **Impact scoring**
+- **Impact scoring**
 
   - **HIGH** — strongly supported by patterns in proven content
   - **MEDIUM** — related to successful content but explores a different angle
   - **LOW** — fills a content gap or diversifies the channel with limited supporting evidence
 
-- 🛡️ **API error handling**
+- **API error handling**
 
   - Handles missing channels
   - API rate limits and quota errors
@@ -76,62 +76,11 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
 
 ---
 
-## 🧠 How It Works
+## How It Works/Architecture Workflow
 
 The application follows a simple data → analysis → reasoning pipeline.
 
-```text
-YouTube Channel URL
-        │
-        ▼
-Extract Channel Information
-        │
-        ├── Channel ID
-        ├── Channel Name
-        ├── Description
-        ├── Subscriber Count
-        └── Uploads Playlist
-        │
-        ▼
-Retrieve Playlists
-        │
-        ▼
-Select Playlist + Time Range
-        │
-        ▼
-Retrieve Playlist Videos
-        │
-        ▼
-Retrieve Video Statistics
-        │
-        ├── Views
-        ├── Likes
-        ├── Duration
-        └── Publication Date
-        │
-        ▼
-Calculate Performance Metrics
-        │
-        ├── Views / Day
-        └── Views / Subscriber
-        │
-        ▼
-Rank Videos
-        │
-        ▼
-Select Top Performing Videos
-        │
-        ▼
-Channel + Video Data → LLM
-        │
-        ▼
-Structured Video Ideas
-        │
-        ├── Title
-        ├── Concept
-        ├── Reasoning
-        └── Impact Level
-```
+
 
 ### 1. Channel Data Extraction
 
@@ -222,7 +171,7 @@ This makes the LLM response predictable and easier for the application to render
 
 ---
 
-## 📊 Example of the Analysis
+## Example of the Analysis
 
 Suppose a channel contains several videos where a particular topic or format consistently performs better than the channel average.
 
@@ -242,7 +191,7 @@ The reasoning is therefore tied to the channel's own historical performance rath
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Ranking              | What it measures                                    |
 | -------------------- | --------------------------------------------------- |
@@ -254,7 +203,7 @@ The reasoning is therefore tied to the channel's own historical performance rath
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 YT-Idea-Gen/
@@ -304,7 +253,7 @@ YT-Idea-Gen/
 
 ---
 
-## 🚀 Getting Started
+## Installation
 
 ### Prerequisites
 
@@ -354,6 +303,6 @@ The application will open in your browser.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Pramit Acharjya**

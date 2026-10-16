@@ -75,6 +75,10 @@ The result is a set of video ideas with **concepts, data-grounded reasoning, and
   - Unexpected API failures
 
 ---
+## Architecture Diagram
+
+![Project Workflow](assets/diagram.svg)
+
 
 ## How It Works/Architecture Workflow
 
